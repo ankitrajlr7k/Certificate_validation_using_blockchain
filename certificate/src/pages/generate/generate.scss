@@ -1,0 +1,138 @@
+@import "../../responsive.scss";
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch; 
+  height: 100vh;
+  
+
+  .upload {
+    flex: 3; 
+    @include md{
+      flex:none;
+      height: max-content;
+    }
+    .wrapper{
+      background-color: #ffffff;
+      padding-right: 50px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      text-align: center;
+  
+      h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+  
+      input[type="file"] {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        padding: 10px;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        width: 80%;
+        outline: none;
+      }
+
+      .btn{
+        margin-bottom: 20px;
+      }
+  
+      button {
+        background-color: #fece51;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+      }
+  
+      progress {
+        display: block;
+        width: 80%;
+        
+        margin: 20px auto;
+      }
+
+
+      .msg{
+        display: block;
+        margin-top: 10px;
+        color: #15ee39;
+        font-size: 14px;
+      }
+  
+      span {
+        display: block;
+        margin-top: 10px;
+        color: #dc3545;
+        font-size: 14px;
+      }
+    }
+
+    .generate{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+      justify-content: center;
+      margin-top: 50px;
+      padding-right: 50px;
+      button{
+        background-color: #fece51;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        color: black;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+        &.inactive{
+          cursor: not-allowed;
+        }
+      }
+
+      .spinner {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border: 3px solid #ccc;
+        border-top: 3px solid #333;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+      
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      span{
+        display: block;
+        margin-top: 10px;
+        color: #15ee39;
+        font-size: 14px;
+      }
+    }
+  
+    }
+   
+  .sideContainer {
+    flex: 2; 
+    background-color: #fcaa84;
+    height: 100%;
+    
+    @include md{
+      flex:none;
+      height: max-content;
+    }
+   
+  }
+}
